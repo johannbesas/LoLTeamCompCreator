@@ -33,7 +33,7 @@ function Champions() {
 
         const pic = document.createElement('img')
         pic.setAttribute('src', event.target.src)
-        pic.setAttribute('class', 'h-16')
+        pic.setAttribute('class', 'h-10 sm:h-16 md:h-26 lg:h-32')
         pic.onclick = reverseClick
 
         if (redBans.childNodes.length === 0) {
@@ -120,39 +120,49 @@ function Champions() {
 
     return <>
         <div className='flex flex-wrap text-white'>
-            <div className='flex-auto w-4/12 bg-gray-800'>
-                <div className='pt-2 pb-2 bg-gradient-to-r from-red-500 to-transparent
-                            sm: text-sm pl-2
-                            md: text-md pl-4
-                            lg: text-xl pl-10
-                            xl: text-3xl pl-10'>Red Side
-                            <input type='text' className='bg-gray-700 ml-2 w-20 text-sm
-                            sm: 
-                            md: w-26 ml-2
-                            lg: w-26 ml-6
-                            xl: text-3xl w-56 ml-10' />
+            <div className='flex-auto w-4/12 bg-gray-800
+            text-sm
+            sm:text-sm
+            md:text-md
+            lg:text-xl
+            xl:text-3xl
+            '>
+                <div className='pt-2 pb-2 pl-2 bg-gradient-to-r from-red-500 to-transparent
+                            sm:pl-2
+                            md:pl-4
+                            lg:pl-10
+                            xl:pl-10'>Red Side
+                            <input type='text' className='bg-gray-700 text-sm w-16 ml-2
+                            sm:text-sm sm:w-20 sm:ml-4
+                            md:text-md md:w-24 md:ml-4
+                            lg:text-lg lg:w-32 lg:ml-6
+                            xl: text-3xl xl:w-40 xl:ml-10' />
                 </div>
-                <h1 className='pt-2 pb-2 bg-gradient-to-r from-red-500 to-transparent		
-                            sm: text-sm pl-2
-                            md: text-md pl-4
-                            lg: text-lg pl-10'> Bans  </h1>
-                <div className='flex flex-wrap h-32' id="redBans">
+                <h1 className='pt-2 pb-2 pl-2 bg-gradient-to-r from-red-500 to-transparent		
+                            sm:pl-2
+                            md:pl-4
+                            lg:pl-10
+                            xl:pl-10'> Bans  </h1>
+                <div className='flex flex-wrap h-64' id="redBans">
                 </div>
-                <h1 className='pt-2 pb-2 pl-10
+                <h1 className='pt-2 pb-2 pl-2
                             bg-gradient-to-r from-red-500 to-transparent
-                            sm: pl-2	
-                            md: pl-4
-                            lg: pl-10'> Picks  </h1>
+                            sm:pl-2
+                            md:pl-4
+                            lg:pl-10
+                            xl:pl-10'> Picks  </h1>
                 <div className='flex flex-wrap h-32' id="redPicks">
                 </div>
             </div>
-            <div className='flex-auto w-4/12 justify-center bg-gray-800'>
+            <div className='flex-auto w-4/12 justify-center bg-gray-800     text-sm
+                            sm:text-sm
+                            md:text-md
+                            lg:text-xl
+                            xl:text-3xl'>
                 <div className='pt-2 pb-2
                             bg-gradient-to-r
-                            text-white text-center	
-                            xl:text-3xl
-                            lg:text-xl
-                            md:text-md'>Notes
+                            text-white text-center'>
+                    Notes
                 </div>
                 <form className='flex flex-auto flex-wrap h-5/6 justify-center'>
                     <textarea type='text' className='h-4/6 w-11/12 bg-gray-700 text-white rounded-md resize-none	' />
@@ -160,45 +170,52 @@ function Champions() {
                 </form>
             </div>
 
-            <div className='flex-auto w-4/12 bg-gray-800'>
-                <div className='pt-2 pb-2 pr-10 
-                            bg-gradient-to-r from-transparent to-blue-500 
-                            text-white text-right	
-                            xl:text-3xl
-                            lg:text-xl
+            <div className='flex-auto w-4/12 bg-gray-800                            text-white text-right
+                            text-sm
+                            sm:text-sm
                             md:text-md
-                            sm:text-sm'>
-                    <input type='text' className='mr-10 bg-gray-700 sm:w-20 sm:mr-6 sm:text-sm' />Blue Side
+                            lg:text-xl
+                            xl:text-3xl'>
+                <div className='pt-2 pb-2 pr-2 
+                            bg-gradient-to-r from-transparent to-blue-500'>
+                    <input type='text' className='bg-gray-700 
+                    text-sm w-16 mr-2
+                    sm:text-sm sm:w-20 sm:mr-4
+                    md:text-md md:w-24 md:mr-4
+                    lg:text-xl lg:w-32 lg:mr-6
+                    xl:text-3xl xl:w-40 xl:mr-10'/>Blue Side
                 </div>
-                <h1 className='pt-2 pb-2 pr-10 
+                <h1 className='pt-2 pb-2 pr-2 
                             bg-gradient-to-r from-transparent to-blue-500 
-                            text-white text-right	
-                            xl:text-3xl
-                            lg:text-xl
-                            md:text-md
-                            sm:text-sm'> Bans  </h1>
-                <div className='flex flex-wrap h-32' id="blueBans">
+                            sm:pr-2
+                            md:pr-4
+                            lg:pr-10
+                            xl:pr-10'> Bans  </h1>
+                <div className='flex flex-wrap h-64' id="blueBans">
 
                 </div>
-                <h1 className='pt-2 pb-2 pr-10 
+                <h1 className='pt-2 pb-2 pr-2
                             bg-gradient-to-r from-transparent to-blue-500 
-                            text-white text-right	
-                            xl:text-3xl
-                            lg:text-xl
-                            md:text-md
-                            sm:text-sm'>
+                            sm:pr-2
+                            md:pr-4
+                            lg:pr-10
+                            xl:pr-10'>
                     Picks </h1>
                 <div className='flex flex-wrap h-32' id="bluePicks">
                 </div>
             </div>
 
-            <div className=' w-auto contents-center bg-gray-800'>
+            <div className=' w-auto h-3/6 contents-center bg-gray-800'>
                 <h1 className='pt-2 pb-2 pl-10 bg-gradient-to-r from-red-500 to-blue-500  text-white
                             xl:text-3xl
                             lg:text-xl
                             md:text-md
                             sm:text-sm'> Champions </h1>
-                <div id='champions' className='pt-6 flex flex-wrap overflow-auto justify-center sm:h-1/6  md:h-3/6 lg:h-5/6'>
+                <div id='champions' className='pt-6 flex flex-wrap overflow-auto overscroll-contain justify-center 
+                sm:h-3/6 
+                md:h-3/6 
+                lg:h-5/6
+                xl: '>
                     {champions}
                 </div>
             </div>
